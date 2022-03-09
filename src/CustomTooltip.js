@@ -1,37 +1,39 @@
-import React from 'react';
+import React from "react";
 
-import Tooltip from '@material-ui/core/Tooltip';
-import { makeStyles, Typography } from '@material-ui/core';
-import InfoIcon from "@material-ui/icons/Info"
+import Tooltip from "@material-ui/core/Tooltip";
+import { makeStyles, Typography } from "@material-ui/core";
+import InfoIcon from "@material-ui/icons/Info";
 
-const message = "Le montant minimum de commande n’est pas atteint. Il manque 18 € pour atteindre ce minimum."
+const message =
+  "Le montant minimum de commande n’est pas atteint. Il manque 18 € pour atteindre ce minimum.";
 
 const useStyles = makeStyles({
   container: {
-    minHeight: '100vh',
-    display: 'flex',
-    justifyContent: 'center',
+    minHeight: "100vh",
+    display: "flex",
+    justifyContent: "center"
   },
   productLabel: {
-    display: 'flex',
-    alignItems: 'center',
+    display: "flex",
+    alignItems: "center"
   },
   titleError: {
     marginRight: 7,
-    color: '#FF5D5A',
+    color: "#FF5D5A"
   },
   errorIcon: {
-    color: '#FF5D5A',
-    cursor: 'pointer',
+    color: "#FF5D5A",
+    cursor: "pointer",
+    fontSize: 20
   },
   errorTooltip: {
-    backgroundColor: '#FF5D5A',
-    fontSize: 14,
+    backgroundColor: "#FF5D5A",
+    fontSize: 14
   },
   arrow: {
-    color: '#FF5D5A',
-  },
-})
+    color: "#FF5D5A"
+  }
+});
 const CustomTooltip = () => {
   const classes = useStyles();
 
@@ -49,15 +51,14 @@ const CustomTooltip = () => {
           arrow
           classes={{
             tooltip: classes.errorTooltip,
-            arrow: classes.arrow,
+            arrow: classes.arrow
           }}
         >
-            <InfoIcon className={classes.errorIcon} />
+          <InfoIcon className={classes.errorIcon} />
         </Tooltip>
       </div>
     </div>
   );
-}
+};
 
 export default CustomTooltip;
-
